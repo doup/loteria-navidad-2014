@@ -51,7 +51,7 @@ function checkPrices() {
             }
         }
 
-        if (results[0].status !== 3) {
+        if (results[0].status < 2) {
             setTimeout(checkPrices, wait);
         } else {
             if (prizes.length) {

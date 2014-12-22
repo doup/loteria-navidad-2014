@@ -40,7 +40,7 @@ function checkPrices() {
     q.all(checks).then(function (results) {
         for (i = 0; i < results.length; i++) {
             if (results[i].premio !== 0) {
-                if (prizes.indexOf(results[i].numero) === -1) {
+                if (prizes.indexOf(results[i].numero.toString()) === -1) {
                     play.sound('fanfare.wav');
                 }
 
